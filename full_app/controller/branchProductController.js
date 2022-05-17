@@ -40,13 +40,19 @@ exports.addProduct = (req, res) => {
 };
 
 // GET method for branch products
-/* exports.getBranchProducts = (req, res) => {
+/*
+exports.getBranchProducts = (req, res) => {
     const branchId = req.body.branchId;
     BranchProduct.findAll({
         where: {
             branchId: branchId
         }
     }).then(branch => {
-
-    })
+        branch.find
+        res.send(products);
+    }).catch((err) => {
+        res.status(500).send({
+          message: "Error getting products with id: " + req.params.id,
+        });
+      });
 }; */
